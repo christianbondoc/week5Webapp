@@ -19,8 +19,10 @@ constructor(props) {
 
 }
 
+
   componentDidMount() {
-    this.socket = mySocket("http://localhost:6969");
+    this.socket = mySocket("https://sysadmin2socket.herokuapp.com/");
+    console.log("Changed socket stuff")
     this.socket.on("createimage", (data) => {
       this.setState ({
         allusers: data
